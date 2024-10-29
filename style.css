@@ -10,6 +10,21 @@ html{
 }
 body{
     /* margin: 0; */
+    header{
+        text-align: center;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        section{
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            margin: 1rem;
+        }
+    }
+   
 }
   code {
     font-family: "FontWithASyntaxHighlighter", monospace;
