@@ -22,6 +22,12 @@ body{
             width: 50%;
             flex-direction: column;
             margin: 1rem;
+            details{
+                margin: 1rem 0;
+                img{
+                  max-width: 100%;
+                }
+            }
         }
     }
    
