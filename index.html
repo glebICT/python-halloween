@@ -23,895 +23,897 @@
                     Mariam
                 </summary>
                 <img src="maryam/Capture.PNG">
-                <pre>
-                    <code>
-                        import turtle
+<pre>
+    <code>
+        import turtle
 
-                        def draw_circle(color, radius, x, y):
-                        turtle.penup()
-                        turtle.goto(x, y)
-                        turtle.pendown()
-                        turtle.fillcolor(color)
-                        turtle.begin_fill()
-                        turtle.circle(radius)
-                        turtle.end_fill()
-
-
-                        def draw_right_leg(x,y):
-                        p = turtle.Turtle()
-                        p.goto(x,y)
-                        p.forward(45) # Length of the leg
-                        p.right(70) # Adjust angle for the next leg
-                        p.forward(50) # Return to the starting point
-                        p.penup()
-                        p.backward(50)
-                        p.left(70)
-                        p.backward(45)
-                        p.right(90)
-                        p.forward(40)
-                        p.pendown()
-
-                        def draw_left_leg(x,y):
-                        p = turtle.Turtle()
-                        p.setheading(180)
-                        p.goto(x,y)
-                        p.forward(45) # Length of the leg
-                        p.left(70) # Adjust angle for the next leg
-                        p.forward(50) # Return to the starting point
-                        p.penup()
-                        p.backward(50)
-                        p.right(70)
-                        p.backward(45)
-                        p.left(90)
-                        p.forward(40)
-                        p.pendown()
-
-                        def draw_spider():
-                        # Draw body and head
-                        draw_circle('black', 50, 0, -50) # Main body
+        def draw_circle(color, radius, x, y):
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
+        turtle.fillcolor(color)
+        turtle.begin_fill()
+        turtle.circle(radius)
+        turtle.end_fill()
 
 
-                        # Draw eyes
-                        draw_circle('pink', 10, -10, 10) # Left eye
-                        draw_circle('light blue', 10, 10, 10) # Right eye
+        def draw_right_leg(x,y):
+        p = turtle.Turtle()
+        p.goto(x,y)
+        p.forward(45) # Length of the leg
+        p.right(70) # Adjust angle for the next leg
+        p.forward(50) # Return to the starting point
+        p.penup()
+        p.backward(50)
+        p.left(70)
+        p.backward(45)
+        p.right(90)
+        p.forward(40)
+        p.pendown()
 
-                        # Draw legs
-                        legs = 8
+        def draw_left_leg(x,y):
+        p = turtle.Turtle()
+        p.setheading(180)
+        p.goto(x,y)
+        p.forward(45) # Length of the leg
+        p.left(70) # Adjust angle for the next leg
+        p.forward(50) # Return to the starting point
+        p.penup()
+        p.backward(50)
+        p.right(70)
+        p.backward(45)
+        p.left(90)
+        p.forward(40)
+        p.pendown()
 
-                        turtle.left(30)
-                        for y in range(0,4):
-                        draw_right_leg(100, y*10)
-                        draw_left_leg(-100,-y*10)
-                        # turtle.penup()
+        def draw_spider():
+        # Draw body and head
+        draw_circle('black', 50, 0, -50) # Main body
+
+
+        # Draw eyes
+        draw_circle('pink', 10, -10, 10) # Left eye
+        draw_circle('light blue', 10, 10, 10) # Right eye
+
+        # Draw legs
+        legs = 8
+
+        turtle.left(30)
+        for y in range(0,4):
+        draw_right_leg(100, y*10)
+        draw_left_leg(-100,-y*10)
+        # turtle.penup()
 
 
 
 
-                        # Set up the screen
-                        turtle.speed(3)
-                        turtle.bgcolor('pink')
+        # Set up the screen
+        turtle.speed(3)
+        turtle.bgcolor('pink')
 
-                        # Draw the spider
-                        draw_spider()
+        # Draw the spider
+        draw_spider()
 
-                        # Finish
-                        turtle.hideturtle()
-                        turtle.done()
-                    </code>
-                </pre>
+        # Finish
+        turtle.hideturtle()
+        turtle.done()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>
                     Nikolas
                 </summary>
-                <img src="nikolas/Capture.PNG">
-                <pre>
-                    <code>
-                        import turtle
+                <img src="Nikolas/Capture.PNG">
+<pre>
+    <code>
+        import turtle
 
-                        def draw_cobweb():
-                        turtle.speed(0.1) # Fastest drawing speed
-                        turtle.bgcolor("black")
-                        turtle.pensize(2)
-                        turtle.color("white")
+        def draw_cobweb():
+        turtle.speed(0.1) # Fastest drawing speed
+        turtle.bgcolor("black")
+        turtle.pensize(2)
+        turtle.color("white")
 
-                        # Draw the concentric circles
-                        for radius in range(20, 200, 20):
-                        turtle.penup()
-                        turtle.goto(0, -radius)
-                        turtle.pendown()
-                        turtle.circle(radius)
+        # Draw the concentric circles
+        for radius in range(20, 200, 20):
+        turtle.penup()
+        turtle.goto(0, -radius)
+        turtle.pendown()
+        turtle.circle(radius)
 
-                        # Draw the spokes
-                        for angle in range(0, 360, 15):
-                        turtle.penup()
-                        turtle.goto(0, 0)
-                        turtle.setheading(angle)
-                        turtle.pendown()
-                        turtle.forward(200)
+        # Draw the spokes
+        for angle in range(0, 360, 15):
+        turtle.penup()
+        turtle.goto(0, 0)
+        turtle.setheading(angle)
+        turtle.pendown()
+        turtle.forward(200)
 
-                        turtle.hideturtle()
+        turtle.hideturtle()
 
-                        def draw_spider(x, y):
-                        turtle.penup()
-                        turtle.goto(x, y) # Position the spider
-                        turtle.pendown()
-                        turtle.color("#ff0000") # Spider color
+        def draw_spider(x, y):
+        turtle.penup()
+        turtle.goto(x, y) # Position the spider
+        turtle.pendown()
+        turtle.color("#ff0000") # Spider color
 
-                        # Draw a bigger spider body
-                        turtle.begin_fill()
-                        turtle.circle(15) # Bigger spider body
-                        turtle.end_fill()
+        # Draw a bigger spider body
+        turtle.begin_fill()
+        turtle.circle(15) # Bigger spider body
+        turtle.end_fill()
 
-                        # Draw bigger spider legs
-                        for angle in range(0, 360, 45): # 8 legs
-                        turtle.penup()
-                        turtle.goto(x, y)
-                        turtle.setheading(angle)
-                        turtle.pendown()
-                        turtle.forward(30) # Longer legs
+        # Draw bigger spider legs
+        for angle in range(0, 360, 45): # 8 legs
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.setheading(angle)
+        turtle.pendown()
+        turtle.forward(30) # Longer legs
 
-                        turtle.hideturtle()
+        turtle.hideturtle()
 
-                        # Setup the window size
-                        turtle.setup(width=1920, height=1080)
+        # Setup the window size
+        turtle.setup(width=1920, height=1080)
 
-                        # Draw the cobweb and spider
-                        draw_cobweb()
-                        draw_spider(0, -10) # Position the spider in the center
+        # Draw the cobweb and spider
+        draw_cobweb()
+        draw_spider(0, -10) # Position the spider in the center
 
-                        turtle.done()
+        turtle.done()
 
-                    </code>
-                </pre>
+    </code>
+</pre>
             </details>
             <details>
                 <summary>
                     Elizabeth
                 </summary>
-                <img src="eli/Capture.PNG">
-                <pre>
-                    <code>
-                        import turtle as t
+                <img src="eli/lizaspidermandala.PNG">
+<pre>
+    <code>
+        import turtle as t
 
-                        # define turtle speed
-                        t.speed(0)
+        # define turtle speed
+        t.speed(0)
 
-                        # radical thread
-                        for i in range(6):
-                        t.forward(100)
-                        t.backward(100)
-                        t.right(60)
+        # radical thread
+        for i in range(6):
+        t.forward(100)
+        t.backward(100)
+        t.right(60)
 
-                        # spiral thread length
-                        side = 50
+        # spiral thread length
+        side = 50
 
-                        # Spider web color
-                        t.fillcolor("white")
+        # Spider web color
+        t.fillcolor("white")
 
-                        # building web
-                        t.begin_fill()
+        # building web
+        t.begin_fill()
 
-                        for i in range(15):
-                        t.penup()
-                        t.goto(0, 0)
-                        t.pendown()
-                        t.setheading(0)
-                        t.forward(side)
-                        t.right(120)
+        for i in range(15):
+        t.penup()
+        t.goto(0, 0)
+        t.pendown()
+        t.setheading(0)
+        t.forward(side)
+        t.right(120)
 
-                        for j in range(6):
-                        t.forward(side-2)
-                        t.right(60)
-                        side = side - 10
+        for j in range(6):
+        t.forward(side-2)
+        t.right(60)
+        side = side - 10
 
 
-                        t.end_fill()
-                        t.done()
+        t.end_fill()
+        t.done()
 
-                    </code>
-                </pre>
+    </code>
+</pre>
             </details>
             <details>
                 <summary>
                     Simone
                 </summary>
                 <img src="Simone/Capture.PNG">
-                <pre>
-                    <code>
-                        import turtle
+<pre>
+    <code>
+        import turtle
 
-                        def draw_star(size):
-                        for _ in range(5):
-                        turtle.forward(size)
-                        turtle.right(144)
+        def draw_star(size):
+        for _ in range(5):
+        turtle.forward(size)
+        turtle.right(144)
 
-                        def draw_mandala_star(radius, star_size):
-                        for _ in range(9): # Number of stars in the mandala
-                        draw_star(star_size)
-                        turtle.penup()
-                        turtle.forward(radius) # Move outwards to position for the next star
-                        turtle.pendown()
-                        draw_star(star_size)
-                        turtle.penup()
-                        turtle.backward(radius) # Move back to the center
-                        turtle.right(40) # Rotate to the next position (360/9 = 40 degrees)
-                        turtle.pendown()
+        def draw_mandala_star(radius, star_size):
+        for _ in range(9): # Number of stars in the mandala
+        draw_star(star_size)
+        turtle.penup()
+        turtle.forward(radius) # Move outwards to position for the next star
+        turtle.pendown()
+        draw_star(star_size)
+        turtle.penup()
+        turtle.backward(radius) # Move back to the center
+        turtle.right(40) # Rotate to the next position (360/9 = 40 degrees)
+        turtle.pendown()
 
-                        def main():
-                        turtle.bgcolor("black") # Set background color to black
-                        turtle.speed(3) # Set the speed of the turtle
-                        turtle.color("red") # Change star color for better visibility against black
+        def main():
+        turtle.bgcolor("black") # Set background color to black
+        turtle.speed(3) # Set the speed of the turtle
+        turtle.color("red") # Change star color for better visibility against black
 
-                        turtle.penup()
-                        turtle.goto(0, 0) # Start at the center
-                        turtle.pendown()
+        turtle.penup()
+        turtle.goto(0, 0) # Start at the center
+        turtle.pendown()
 
-                        draw_mandala_star(100, 30) # Draw the mandala of stars
+        draw_mandala_star(100, 30) # Draw the mandala of stars
 
-                        turtle.hideturtle() # Hide the turtle
-                        turtle.done() # Finish the drawing
+        turtle.hideturtle() # Hide the turtle
+        turtle.done() # Finish the drawing
 
-                        if __name__ == "__main__":
-                        main()
-                    </code>
-                </pre>
+        if __name__ == "__main__":
+        main()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Gregory</summary>
                 <img src="gregory/Capture.PNG">
-                <pre>
-                    <code>
-                        import turtle
-                        import time
+<pre>
+    <code>
+        import turtle
+        import time
 
 
-                        window = turtle.Screen()
-                        window.bgcolor("black")
+        window = turtle.Screen()
+        window.bgcolor("black")
 
 
-                        circle1 = turtle.Turtle()
-                        circle1.hideturtle()
-                        circle1.goto(-40, 0)
-                        circle1.color("dark orange")
-                        circle1.dot(250)
+        circle1 = turtle.Turtle()
+        circle1.hideturtle()
+        circle1.goto(-40, 0)
+        circle1.color("dark orange")
+        circle1.dot(250)
 
-                        circle2 = turtle.Turtle()
-                        circle2.hideturtle()
-                        circle2.goto(40, 0)
-                        circle2.color("dark orange")
-                        circle2.dot(250)
-
-
-                        pumpkin = turtle.Turtle()
-                        pumpkin.hideturtle()
-                        pumpkin.color("orange")
-                        pumpkin.dot(250)
+        circle2 = turtle.Turtle()
+        circle2.hideturtle()
+        circle2.goto(40, 0)
+        circle2.color("dark orange")
+        circle2.dot(250)
 
 
-                        carver = turtle.Turtle()
+        pumpkin = turtle.Turtle()
+        pumpkin.hideturtle()
+        pumpkin.color("orange")
+        pumpkin.dot(250)
 
 
-                        carver.penup()
-                        carver.setposition(-200, -100)
-                        carver.pensize(50)
-                        carver.pendown()
-                        carver.forward(600)
-                        carver.pensize(2)
-
-                        def carver_pumpkin(color):
-                        carver.color(color)
+        carver = turtle.Turtle()
 
 
-                        def make_eye(start, orientation):
-                        carver.setheading(0)
-                        carver.penup()
-                        carver.setposition(*start)
-                        carver.pendown()
-                        carver.begin_fill()
-                        carver.forward(orientation * 40)
-                        carver.setheading(orientation * 135)
-                        carver.forward(orientation * 70)
-                        carver.end_fill()
+        carver.penup()
+        carver.setposition(-200, -100)
+        carver.pensize(50)
+        carver.pendown()
+        carver.forward(600)
+        carver.pensize(2)
 
-                        make_eye((-50, 20), 1)
-                        make_eye((50, 20), -1)
+        def carver_pumpkin(color):
+        carver.color(color)
 
 
-                        carver.penup()
-                        carver.setposition(-50, -30)
-                        carver.setheading(45)
-                        carver.pendown()
-                        carver.pensize(1)
-                        carver.begin_fill()
-                        for _ in range(5):
-                        carver.forward(15)
-                        carver.right(90)
-                        carver.forward(15)
-                        carver.left(90)
-                        carver.setheading(260)
-                        carver.forward(20)
-                        carver.setheading(180)
-                        carver.forward(99)
-                        carver.end_fill()
+        def make_eye(start, orientation):
+        carver.setheading(0)
+        carver.penup()
+        carver.setposition(*start)
+        carver.pendown()
+        carver.begin_fill()
+        carver.forward(orientation * 40)
+        carver.setheading(orientation * 135)
+        carver.forward(orientation * 70)
+        carver.end_fill()
+
+        make_eye((-50, 20), 1)
+        make_eye((50, 20), -1)
 
 
-                        carver.penup()
-                        carver.setposition(0, 0)
-                        carver.setheading(90)
-                        carver.shape("triangle")
-                        carver.stamp()
+        carver.penup()
+        carver.setposition(-50, -30)
+        carver.setheading(45)
+        carver.pendown()
+        carver.pensize(1)
+        carver.begin_fill()
+        for _ in range(5):
+        carver.forward(15)
+        carver.right(90)
+        carver.forward(15)
+        carver.left(90)
+        carver.setheading(260)
+        carver.forward(20)
+        carver.setheading(180)
+        carver.forward(99)
+        carver.end_fill()
 
 
-                        carver_pumpkin("black")
+        carver.penup()
+        carver.setposition(0, 0)
+        carver.setheading(90)
+        carver.shape("triangle")
+        carver.stamp()
 
 
-                        text = turtle.Turtle()
-                        text.hideturtle()
-                        text.color("orange")
-                        text.penup()
-                        text.sety(175)
-                        text.write("Witching you a Happy Halloween!", font=("Trattatello", 40, "bold"), align="center")
+        carver_pumpkin("black")
 
 
-                        window.tracer(0)
-                        start = time.time()
-                        count = 0
-                        colors = ["yellow", "black"]
+        text = turtle.Turtle()
+        text.hideturtle()
+        text.color("orange")
+        text.penup()
+        text.sety(175)
+        text.write("Witching you a Happy Halloween!", font=("Trattatello", 40, "bold"), align="center")
 
-                        while True:
-                        if time.time() - start > 1:
-                        carver_pumpkin(colors[count % 2])
-                        window.update()
-                        count += 1
-                        start = time.time()
 
-                        turtle.done()
-                    </code>
-                </pre>
+        window.tracer(0)
+        start = time.time()
+        count = 0
+        colors = ["yellow", "black"]
+
+        while True:
+        if time.time() - start > 1:
+        carver_pumpkin(colors[count % 2])
+        window.update()
+        count += 1
+        start = time.time()
+
+        turtle.done()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Tamara</summary>
                 <img src="Tamara/pumpk.PNG">
-                <pre>
-                    <code>
-                        import turtle
-                        turtle.speed(0)
-                        turtle.bgcolor("black")
+<pre>
+    <code>
+        import turtle
+        turtle.speed(0)
+        turtle.bgcolor("black")
 
-                        def draw_pumpkin():
-                        turtle.color("#FF4500")
+        def draw_pumpkin():
+        turtle.color("#FF4500")
 
-                        # Draw the pumpkin body
-                        turtle.begin_fill()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        # Draw the pumpkin body
+        turtle.begin_fill()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        turtle.begin_fill()
-                        turtle.penup()
-                        turtle.backward(70)
-                        turtle.pendown()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        turtle.begin_fill()
+        turtle.penup()
+        turtle.backward(70)
+        turtle.pendown()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        turtle.begin_fill()
-                        turtle.penup()
-                        turtle.backward(50)
-                        turtle.pendown()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        turtle.begin_fill()
+        turtle.penup()
+        turtle.backward(50)
+        turtle.pendown()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        def eye(x,y, color):
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.color(color)
-                        for _ in range(3):
-                        turtle.forward(50)
-                        turtle.right(-120)
-                        turtle.end_fill()
-
-
+        def eye(x,y, color):
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.color(color)
+        for _ in range(3):
+        turtle.forward(50)
+        turtle.right(-120)
+        turtle.end_fill()
 
 
 
 
-                        # Draw the mouth
-                        def mouth1(x,y, color):
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.color(color)
-                        for _ in range(3):
-                        turtle.forward(35)
-                        turtle.right(-120)
-                        turtle.end_fill()
-
-                        def mouth2(x,y, color):
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.color(color)
-                        for _ in range(3):
-                        turtle.forward(35)
-                        turtle.right(120)
-                        turtle.end_fill()
 
 
-                        def draw_face():
-                        eye(-150,110, 'black')
-                        eye(-20, 110, 'black')
-                        mouth1(-155,50, "black")
-                        mouth2(-145,55, "black")
-                        mouth1(-135,50, "black")
-                        mouth2(-125,55, "black")
-                        mouth1(-115,50, "black")
-                        mouth2(-105,55, "black")
-                        mouth1(-95,50, "black")
-                        mouth2(-85,55, "black")
-                        mouth1(-75,50, "black")
-                        mouth2(-65,55, "black")
-                        mouth1(-55,50, "black")
-                        mouth2(-45,55, "black")
-                        mouth1(-35,50, "black")
-                        mouth2(-25,55, "black")
-                        mouth1(-15,50, "black")
+        # Draw the mouth
+        def mouth1(x,y, color):
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.color(color)
+        for _ in range(3):
+        turtle.forward(35)
+        turtle.right(-120)
+        turtle.end_fill()
+
+        def mouth2(x,y, color):
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.color(color)
+        for _ in range(3):
+        turtle.forward(35)
+        turtle.right(120)
+        turtle.end_fill()
+
+
+        def draw_face():
+        eye(-150,110, 'black')
+        eye(-20, 110, 'black')
+        mouth1(-155,50, "black")
+        mouth2(-145,55, "black")
+        mouth1(-135,50, "black")
+        mouth2(-125,55, "black")
+        mouth1(-115,50, "black")
+        mouth2(-105,55, "black")
+        mouth1(-95,50, "black")
+        mouth2(-85,55, "black")
+        mouth1(-75,50, "black")
+        mouth2(-65,55, "black")
+        mouth1(-55,50, "black")
+        mouth2(-45,55, "black")
+        mouth1(-35,50, "black")
+        mouth2(-25,55, "black")
+        mouth1(-15,50, "black")
 
 
 
-                        def main():
-                        turtle.title("Scary Pumpkin")
-                        draw_pumpkin()
-                        draw_face()
+        def main():
+        turtle.title("Scary Pumpkin")
+        draw_pumpkin()
+        draw_face()
 
-                        # draw_triangle()
-                        turtle.hideturtle()
-                        turtle.done()
+        # draw_triangle()
+        turtle.hideturtle()
+        turtle.done()
 
-                        if __name__ == "__main__":
-                        main()
+        if __name__ == "__main__":
+        main()
 
-                    </code>
-                </pre>
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Evelina</summary>
                 <img src="evelina/Capture.JPG">
-                <pre>
-                    <code>
-                        import turtle
+<pre>
+    <code>
+        import turtle
 
-                        bat = turtle.Turtle()
+        bat = turtle.Turtle()
 
-                        bat.speed(0)
+        bat.speed(0)
 
-                        bat.turtlesize(1, 1, 1)
-                        bat.pensize(3)
+        bat.turtlesize(1, 1, 1)
+        bat.pensize(3)
 
-                        wn = turtle.Screen()
-                        wn.bgcolor("blue")
-
-
-                        bat.color("black", "black")
+        wn = turtle.Screen()
+        wn.bgcolor("blue")
 
 
-                        bat.begin_fill()
-
-                        bat.left(90)
-                        bat.circle(50, 85)
-                        bat.circle(15, 110)
-                        bat.right(180)
+        bat.color("black", "black")
 
 
-                        bat.circle(30, 150)
-                        bat.right(5)
-                        bat.forward(10)
+        bat.begin_fill()
+
+        bat.left(90)
+        bat.circle(50, 85)
+        bat.circle(15, 110)
+        bat.right(180)
 
 
-                        bat.right(90)
-                        bat.circle(-70, 140)
-                        bat.forward(40)
-                        bat.right(110)
-
-                        bat.circle(100, 30)
-                        bat.circle(30, 100)
-                        bat.left(50)
-                        bat.forward(50)
-                        bat.right(145)
-
-                        bat.forward(30)
-                        bat.left(55)
-                        bat.forward(10)
+        bat.circle(30, 150)
+        bat.right(5)
+        bat.forward(10)
 
 
-                        bat.forward(10)
-                        bat.left(55)
-                        bat.forward(30)
+        bat.right(90)
+        bat.circle(-70, 140)
+        bat.forward(40)
+        bat.right(110)
+
+        bat.circle(100, 30)
+        bat.circle(30, 100)
+        bat.left(50)
+        bat.forward(50)
+        bat.right(145)
+
+        bat.forward(30)
+        bat.left(55)
+        bat.forward(10)
 
 
-                        bat.right(145)
-                        bat.forward(50)
-                        bat.left(50)
-                        bat.circle(30, 100)
-                        bat.circle(100, 30)
+        bat.forward(10)
+        bat.left(55)
+        bat.forward(30)
 
 
-                        bat.right(90)
-                        bat.right(20)
-                        bat.forward(40)
-                        bat.circle(-70, 140)
-
-                        bat.right(90)
-                        bat.forward(10)
-                        bat.right(5)
-                        bat.circle(30, 150)
+        bat.right(145)
+        bat.forward(50)
+        bat.left(50)
+        bat.circle(30, 100)
+        bat.circle(100, 30)
 
 
-                        bat.left(180)
-                        bat.circle(15, 110)
-                        bat.circle(50, 85)
+        bat.right(90)
+        bat.right(20)
+        bat.forward(40)
+        bat.circle(-70, 140)
 
-                        bat.up()
-                        bat.goto(0, -200)
-                        bat.down()
-                        bat.begin_fill()
-                        bat.circle(200)
-                        bat.end_fill()
-
-
-                        bat.up()
-                        bat.goto(60, -130)
-                        bat.color("blue")
-                        bat.down()
-                        bat.begin_fill()
-                        bat.circle(250)
-                        bat.end_fill()
+        bat.right(90)
+        bat.forward(10)
+        bat.right(5)
+        bat.circle(30, 150)
 
 
-                        bat.hideturtle()
+        bat.left(180)
+        bat.circle(15, 110)
+        bat.circle(50, 85)
 
-                        turtle.done()
+        bat.up()
+        bat.goto(0, -200)
+        bat.down()
+        bat.begin_fill()
+        bat.circle(200)
+        bat.end_fill()
 
-                    </code>
-                </pre>
+
+        bat.up()
+        bat.goto(60, -130)
+        bat.color("blue")
+        bat.down()
+        bat.begin_fill()
+        bat.circle(250)
+        bat.end_fill()
+
+
+        bat.hideturtle()
+
+        turtle.done()
+
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Alexey
 
                 </summary>
                 <img src="alexey_ulkov_9/Capture.PNG" />
-                <pre>
-                    <code>
-                        import turtle
-                        import time
+<pre>
+    <code>
+        import turtle
+        import time
 
-                        t = turtle.Pen()
-                        turtle.Screen().bgcolor("black")
-                        turtle.colormode(255)
+        t = turtle.Pen()
+        turtle.Screen().bgcolor("black")
+        turtle.colormode(255)
 
-                        t.up()
-                        t.speed(0)
+        t.up()
+        t.speed(0)
 
-                        def circle(r, g, b, size):
-                        t.color(int(r), int(g), int(b))
-                        t.begin_fill()
-                        t.down()
-                        t.circle(int(size))
-                        t.end_fill()
-                        t.up()
+        def circle(r, g, b, size):
+        t.color(int(r), int(g), int(b))
+        t.begin_fill()
+        t.down()
+        t.circle(int(size))
+        t.end_fill()
+        t.up()
 
-                        t.sety(-150)
-                        t.setx(65)
-                        circle(210, 115, 5, 210)
-                        t.setx(-65)
-                        circle(210, 115, 5, 210)
-                        t.setx(0)
-                        circle(220, 120, 5, 208)
+        t.sety(-150)
+        t.setx(65)
+        circle(210, 115, 5, 210)
+        t.setx(-65)
+        circle(210, 115, 5, 210)
+        t.setx(0)
+        circle(220, 120, 5, 208)
 
-                        def triangle(r, g, b, size):
-                        t.color(int(r), int(g), int(b))
-                        t.down()
-                        t.begin_fill()
-                        t.circle(size, None, 3)
-                        t.end_fill()
-                        t.up()
+        def triangle(r, g, b, size):
+        t.color(int(r), int(g), int(b))
+        t.down()
+        t.begin_fill()
+        t.circle(size, None, 3)
+        t.end_fill()
+        t.up()
 
-                        t.setpos(-80, 70)
-                        t.right(5)
-                        triangle(0, 0, 0, 50)
-                        t.setpos(85, 68)
-                        t.left(15)
-                        triangle(0, 0, 0, 45)
+        t.setpos(-80, 70)
+        t.right(5)
+        triangle(0, 0, 0, 50)
+        t.setpos(85, 68)
+        t.left(15)
+        triangle(0, 0, 0, 45)
 
-                        t.home()
+        t.home()
 
-                        t.right(190)
+        t.right(190)
 
-                        for n in range(10):
-                        xcord = (n - 5) * 20
-                        ycord = ((n - 5) ** 2) / 2 - 30
-                        t.setpos(xcord, ycord)
-                        t.left(2)
-                        triangle(0, 0, 0, 35)
+        for n in range(10):
+        xcord = (n - 5) * 20
+        ycord = ((n - 5) ** 2) / 2 - 30
+        t.setpos(xcord, ycord)
+        t.left(2)
+        triangle(0, 0, 0, 35)
 
-                        t.home()
-                        t.setpos(0, 20)
-                        triangle(0, 0, 0, 30)
+        t.home()
+        t.setpos(0, 20)
+        triangle(0, 0, 0, 30)
 
-                        number = 0
+        number = 0
 
-                        while True:
-                        number = number + 1
-                        if number == 100:
-                        for a in range(100):
-                        number = number - 1
-                        turtle.bgcolor(number, number, number)
-                        time.sleep(0.02)
-                        else:
-                        turtle.bgcolor(number, number, number)
-                        time.sleep(0.01)
+        while True:
+        number = number + 1
+        if number == 100:
+        for a in range(100):
+        number = number - 1
+        turtle.bgcolor(number, number, number)
+        time.sleep(0.02)
+        else:
+        turtle.bgcolor(number, number, number)
+        time.sleep(0.01)
 
-                        turtle.done()
-                    </code>
-                </pre>
+        turtle.done()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Sofia</summary>
-                <pre><code>
+<pre><code>
 
-                        import turtle
-                        turtle.speed(0)
-                        turtle.bgcolor("black")
+        import turtle
+        turtle.speed(0)
+        turtle.bgcolor("black")
 
-                        def draw_pumpkin():
-                        turtle.color("#FF4500")
+        def draw_pumpkin():
+        turtle.color("#FF4500")
 
-                        # Draw the pumpkin body
-                        turtle.begin_fill()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        # Draw the pumpkin body
+        turtle.begin_fill()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        turtle.begin_fill()
-                        turtle.penup()
-                        turtle.backward(70)
-                        turtle.pendown()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        turtle.begin_fill()
+        turtle.penup()
+        turtle.backward(70)
+        turtle.pendown()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        turtle.begin_fill()
-                        turtle.penup()
-                        turtle.backward(50)
-                        turtle.pendown()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        turtle.begin_fill()
+        turtle.penup()
+        turtle.backward(50)
+        turtle.pendown()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        def eye(x,y, color):
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.color(color)
-                        for _ in range(3):
-                        turtle.forward(50)
-                        turtle.right(-120)
-                        turtle.end_fill()
-
-
+        def eye(x,y, color):
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.color(color)
+        for _ in range(3):
+        turtle.forward(50)
+        turtle.right(-120)
+        turtle.end_fill()
 
 
 
 
-                        # Draw the mouth
-                        def mouth1(x,y, color):
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.color(color)
-                        for _ in range(3):
-                        turtle.forward(35)
-                        turtle.right(-120)
-                        turtle.end_fill()
-
-                        def mouth2(x,y, color):
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.color(color)
-                        for _ in range(3):
-                        turtle.forward(35)
-                        turtle.right(120)
-                        turtle.end_fill()
 
 
-                        def draw_face():
-                        eye(-150,110, 'black')
-                        eye(-20, 110, 'black')
-                        mouth1(-155,50, "black")
-                        mouth2(-145,55, "black")
-                        mouth1(-135,50, "black")
-                        mouth2(-125,55, "black")
-                        mouth1(-115,50, "black")
-                        mouth2(-105,55, "black")
-                        mouth1(-95,50, "black")
-                        mouth2(-85,55, "black")
-                        mouth1(-75,50, "black")
-                        mouth2(-65,55, "black")
-                        mouth1(-55,50, "black")
-                        mouth2(-45,55, "black")
-                        mouth1(-35,50, "black")
-                        mouth2(-25,55, "black")
-                        mouth1(-15,50, "black")
+        # Draw the mouth
+        def mouth1(x,y, color):
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.color(color)
+        for _ in range(3):
+        turtle.forward(35)
+        turtle.right(-120)
+        turtle.end_fill()
+
+        def mouth2(x,y, color):
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.color(color)
+        for _ in range(3):
+        turtle.forward(35)
+        turtle.right(120)
+        turtle.end_fill()
+
+
+        def draw_face():
+        eye(-150,110, 'black')
+        eye(-20, 110, 'black')
+        mouth1(-155,50, "black")
+        mouth2(-145,55, "black")
+        mouth1(-135,50, "black")
+        mouth2(-125,55, "black")
+        mouth1(-115,50, "black")
+        mouth2(-105,55, "black")
+        mouth1(-95,50, "black")
+        mouth2(-85,55, "black")
+        mouth1(-75,50, "black")
+        mouth2(-65,55, "black")
+        mouth1(-55,50, "black")
+        mouth2(-45,55, "black")
+        mouth1(-35,50, "black")
+        mouth2(-25,55, "black")
+        mouth1(-15,50, "black")
 
 
 
-                        def main():
-                        turtle.title("Scary Pumpkin")
-                        draw_pumpkin()
-                        draw_face()
+        def main():
+        turtle.title("Scary Pumpkin")
+        draw_pumpkin()
+        draw_face()
 
-                        # draw_triangle()
-                        turtle.hideturtle()
-                        turtle.done()
+        # draw_triangle()
+        turtle.hideturtle()
+        turtle.done()
 
-                        if __name__ == "__main__":
-                        main()
+        if __name__ == "__main__":
+        main()
 
 
-                    </code>
-                </pre>
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Elina</summary>
                 <img src="elia/elia lion.PNG">
-                <pre><code>
-                        import turtle
+<pre>
+    <code>
+        import turtle
 
-                        def draw_head():
-                        turtle.speed(0)
-                        turtle.bgcolor("#8FE79B")
-                        turtle.color("#ffde0c")
-                        turtle.goto(100,-10)
-                        turtle.begin_fill()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        def draw_head():
+        turtle.speed(0)
+        turtle.bgcolor("#8FE79B")
+        turtle.color("#ffde0c")
+        turtle.goto(100,-10)
+        turtle.begin_fill()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        def draw_eyes():
-                        turtle.speed(0)
-                        turtle.color("white")
-                        turtle.penup()
-                        turtle.goto(150,80)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.circle(25)
-                        turtle.end_fill()
+        def draw_eyes():
+        turtle.speed(0)
+        turtle.color("white")
+        turtle.penup()
+        turtle.goto(150,80)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.circle(25)
+        turtle.end_fill()
 
-                        turtle.speed(0)
-                        turtle.color("white")
-                        turtle.penup()
-                        turtle.goto(50,80)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.circle(25)
-                        turtle.end_fill()
+        turtle.speed(0)
+        turtle.color("white")
+        turtle.penup()
+        turtle.goto(50,80)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.circle(25)
+        turtle.end_fill()
 
-                        turtle.speed(0)
-                        turtle.color("black")
-                        turtle.penup()
-                        turtle.goto(150,80)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.circle(20)
-                        turtle.end_fill()
+        turtle.speed(0)
+        turtle.color("black")
+        turtle.penup()
+        turtle.goto(150,80)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.circle(20)
+        turtle.end_fill()
 
-                        turtle.speed(0)
-                        turtle.color("black")
-                        turtle.penup()
-                        turtle.goto(50,80)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.circle(20)
-                        turtle.end_fill()
+        turtle.speed(0)
+        turtle.color("black")
+        turtle.penup()
+        turtle.goto(50,80)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.circle(20)
+        turtle.end_fill()
 
-                        def draw_nose():
-                        turtle.speed(0)
-                        turtle.fillcolor('black')
-                        turtle.penup()
-                        turtle.goto(90,70)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(3):
-                        turtle.forward(20)
-                        turtle.right(120)
-                        turtle.end_fill()
+        def draw_nose():
+        turtle.speed(0)
+        turtle.fillcolor('black')
+        turtle.penup()
+        turtle.goto(90,70)
+        turtle.pendown()
+        turtle.begin_fill()
+        for _ in range(3):
+        turtle.forward(20)
+        turtle.right(120)
+        turtle.end_fill()
 
-                        def draw_mouth():
-                        turtle.speed(0)
-                        turtle.color('black')
-                        turtle.penup()
-                        turtle.goto(100,55)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(1):
-                        turtle.forward(50)
-                        turtle.right(180)
-                        turtle.end_fill()
+        def draw_mouth():
+        turtle.speed(0)
+        turtle.color('black')
+        turtle.penup()
+        turtle.goto(100,55)
+        turtle.pendown()
+        turtle.begin_fill()
+        for _ in range(1):
+        turtle.forward(50)
+        turtle.right(180)
+        turtle.end_fill()
 
-                        turtle.speed(0)
-                        turtle.fillcolor('black')
-                        turtle.penup()
-                        turtle.goto(100,55)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        for _ in range(1):
-                        turtle.forward(50)
-                        turtle.left(80)
-                        turtle.end_fill()
+        turtle.speed(0)
+        turtle.fillcolor('black')
+        turtle.penup()
+        turtle.goto(100,55)
+        turtle.pendown()
+        turtle.begin_fill()
+        for _ in range(1):
+        turtle.forward(50)
+        turtle.left(80)
+        turtle.end_fill()
 
-                        def draw_tooth(x,y, t):
-                        t.speed(0)
-                        t.fillcolor('white')
-                        t.penup()
-                        t.goto(x,y)
-                        t.pendown()
-                        t.begin_fill()
-                        for _ in range(3):
-                        t.forward(20)
-                        t.right(120)
-                        t.end_fill()
-                        t.hideturtle()
+        def draw_tooth(x,y, t):
+        t.speed(0)
+        t.fillcolor('white')
+        t.penup()
+        t.goto(x,y)
+        t.pendown()
+        t.begin_fill()
+        for _ in range(3):
+        t.forward(20)
+        t.right(120)
+        t.end_fill()
+        t.hideturtle()
 
 
 
-                        def draw_ear(x,y):
-                        turtle.speed(0)
-                        turtle.color("#ffde0c")
-                        turtle.penup()
-                        turtle.goto(x,y)
-                        turtle.pendown()
-                        turtle.begin_fill()
-                        turtle.circle(23)
-                        turtle.end_fill()
+        def draw_ear(x,y):
+        turtle.speed(0)
+        turtle.color("#ffde0c")
+        turtle.penup()
+        turtle.goto(x,y)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.circle(23)
+        turtle.end_fill()
 
-                        def draw_hair():
-                        turtle.speed(0)
-                        turtle.color("#FFBF00")
-                        turtle.begin_fill()
-                        turtle.circle(100)
-                        turtle.end_fill()
+        def draw_hair():
+        turtle.speed(0)
+        turtle.color("#FFBF00")
+        turtle.begin_fill()
+        turtle.circle(100)
+        turtle.end_fill()
 
-                        def draw_mandala(repeats, size):
-                        for i in range(repeats):
-                        draw_hair()
+        def draw_mandala(repeats, size):
+        for i in range(repeats):
+        draw_hair()
 
-                        turtle.right(360 / repeats)
+        turtle.right(360 / repeats)
 
-                        def main():
-                        turtle.title("lion")
-                        turtle.penup()
-                        turtle.goto(100, 100)
-                        turtle.pendown()
-                        draw_mandala(8, 50)
-                        draw_head()
-                        draw_eyes()
-                        draw_nose()
-                        draw_mouth()
-                        bob = turtle.Turtle()
-                        draw_tooth(58,55, bob)
-                        draw_tooth(120,55, bob)
-                        draw_ear(155,175)
-                        draw_ear(5,175)
+        def main():
+        turtle.title("lion")
+        turtle.penup()
+        turtle.goto(100, 100)
+        turtle.pendown()
+        draw_mandala(8, 50)
+        draw_head()
+        draw_eyes()
+        draw_nose()
+        draw_mouth()
+        bob = turtle.Turtle()
+        draw_tooth(58,55, bob)
+        draw_tooth(120,55, bob)
+        draw_ear(155,175)
+        draw_ear(5,175)
 
-                        turtle.hideturtle()
-                        turtle.done()
+        turtle.hideturtle()
+        turtle.done()
 
-                        if __name__ == "__main__":
-                        main()
-                    </code>
+        if __name__ == "__main__":
+        main()
+    </code>
+</pre>
             </details>
         </section>
         <section>
@@ -919,650 +921,650 @@
             <details>
                 <summary>Ksenia</summary>
                 <img src="ksenia/Capture.PNG">
-                <pre>
-                    <code>
-                        import time
-                        import turtle
+<pre>
+    <code>
+        import time
+        import turtle
 
-                        window = turtle.Screen()
-                        window.bgcolor("black")
+        window = turtle.Screen()
+        window.bgcolor("black")
 
-                        # Whole pumpkin
-                        pumpkin = turtle.Turtle()
-                        pumpkin.hideturtle()
-                        pumpkin.color("orange")
-                        pumpkin.dot(200)
+        # Whole pumpkin
+        pumpkin = turtle.Turtle()
+        pumpkin.hideturtle()
+        pumpkin.color("orange")
+        pumpkin.dot(200)
 
-                        # The turtle to "carve" the pumpkin
-                        pum = turtle.Turtle()
+        # The turtle to "carve" the pumpkin
+        pum = turtle.Turtle()
 
-                        # "Flatten" the lower part of the pumpkin
-                        pum.penup()
-                        pum.setposition(-200, -100)
-                        pum.pensize(60)
-                        pum.pendown()
-                        pum.forward(600)
-                        pum.pensize(2)
+        # "Flatten" the lower part of the pumpkin
+        pum.penup()
+        pum.setposition(-200, -100)
+        pum.pensize(60)
+        pum.pendown()
+        pum.forward(600)
+        pum.pensize(2)
 
-                        def carve_pumpkin(colour):
-                        pum.color(colour)
+        def carve_pumpkin(colour):
+        pum.color(colour)
 
-                        # Make eyes
-                        def make_eye(start, orientation):
-                        pum.setheading(0)
-                        pum.penup()
-                        pum.setposition(*start)
-                        pum.pendown()
-                        pum.begin_fill()
-                        pum.forward(orientation * 40)
-                        pum.setheading(orientation * 135)
-                        pum.forward(orientation * 70)
-                        pum.end_fill()
+        # Make eyes
+        def make_eye(start, orientation):
+        pum.setheading(0)
+        pum.penup()
+        pum.setposition(*start)
+        pum.pendown()
+        pum.begin_fill()
+        pum.forward(orientation * 40)
+        pum.setheading(orientation * 135)
+        pum.forward(orientation * 70)
+        pum.end_fill()
 
-                        make_eye((-50, 20), 1)
-                        make_eye((50, 20), -1)
+        make_eye((-50, 20), 1)
+        make_eye((50, 20), -1)
 
-                        # Make mouth
-                        pum.penup()
-                        pum.setposition(-50, -30)
-                        pum.setheading(45)
-                        pum.pendown()
-                        pum.pensize(1)
-                        pum.begin_fill()
-                        for _ in range(5):
-                        pum.forward(15)
-                        pum.right(90)
-                        pum.forward(15)
-                        pum.left(90)
-                        pum.setheading(260)
-                        pum.forward(20)
-                        pum.setheading(180)
-                        pum.forward(99)
-                        pum.end_fill()
+        # Make mouth
+        pum.penup()
+        pum.setposition(-50, -30)
+        pum.setheading(45)
+        pum.pendown()
+        pum.pensize(1)
+        pum.begin_fill()
+        for _ in range(5):
+        pum.forward(15)
+        pum.right(90)
+        pum.forward(15)
+        pum.left(90)
+        pum.setheading(260)
+        pum.forward(20)
+        pum.setheading(180)
+        pum.forward(99)
+        pum.end_fill()
 
-                        # Make nose
-                        pum.penup()
-                        pum.setposition(0, 0)
-                        pum.setheading(90)
-                        pum.shape("triangle")
-                        pum.stamp()
+        # Make nose
+        pum.penup()
+        pum.setposition(0, 0)
+        pum.setheading(90)
+        pum.shape("triangle")
+        pum.stamp()
 
-                        carve_pumpkin("black")
+        carve_pumpkin("black")
 
-                        # Write text on animation
-                        text = turtle.Turtle()
-                        text.hideturtle()
-                        text.color("orange")
-                        text.penup()
-                        text.sety(175)
-                        text.write("Happy Halloween", font=("Trattatello", 60, "bold"), align="center")
+        # Write text on animation
+        text = turtle.Turtle()
+        text.hideturtle()
+        text.color("orange")
+        text.penup()
+        text.sety(175)
+        text.write("Happy Halloween", font=("Trattatello", 60, "bold"), align="center")
 
-                        window.tracer(0)
-                        start = time.time()
-                        count = 0
-                        colours = "yellow", "black"
-                        while True:
-                        if time.time() - start > 1:
-                        carve_pumpkin(colours[count % 2])
-                        window.update()
-                        count += 1
-                        start = time.time() # Reset timer
+        window.tracer(0)
+        start = time.time()
+        count = 0
+        colours = "yellow", "black"
+        while True:
+        if time.time() - start > 1:
+        carve_pumpkin(colours[count % 2])
+        window.update()
+        count += 1
+        start = time.time() # Reset timer
 
-                        turtle.done()
-                    </code>
-                </pre>
+        turtle.done()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Meral</summary>
                 <img src="meral/Capture.PNG">
-                <pre>
-                    <code>
-                        import turtle
+<pre>
+    <code>
+        import turtle
 
 
-                        sp=turtle.Turtle()
+        sp=turtle.Turtle()
 
 
-                        sp.pensize(5)
-                        sp.speed(10)
+        sp.pensize(5)
+        sp.speed(10)
 
 
-                        s=turtle.Screen()
-                        s.bgcolor("White")
-                        s.title("SpiderMan")
-                        sp.hideturtle()
+        s=turtle.Screen()
+        s.bgcolor("White")
+        s.title("SpiderMan")
+        sp.hideturtle()
 
 
 
 
-                        sp.color("Black")
-                        sp.fillcolor("Red")
-                        sp.begin_fill()
-                        sp.penup()
-                        sp.goto(-200,125)
-                        sp.pendown()
+        sp.color("Black")
+        sp.fillcolor("Red")
+        sp.begin_fill()
+        sp.penup()
+        sp.goto(-200,125)
+        sp.pendown()
 
 
 
 
-                        sp.left(90)
-                        sp.circle(-250,180)
+        sp.left(90)
+        sp.circle(-250,180)
 
 
-                        sp.forward(120)
+        sp.forward(120)
 
 
-                        sp.circle(-420,60)
+        sp.circle(-420,60)
 
 
-                        sp.circle(-100,75)
+        sp.circle(-100,75)
 
 
-                        sp.left(2.5)
-                        sp.circle(-538.5,57)
-                        sp.end_fill()
+        sp.left(2.5)
+        sp.circle(-538.5,57)
+        sp.end_fill()
 
 
-                        #left eye
-                        sp.color("Black")
-                        sp.fillcolor("Black")
-                        sp.begin_fill()
-                        sp.penup()
-                        sp.goto(30,60)
-                        sp.pendown()
+        #left eye
+        sp.color("Black")
+        sp.fillcolor("Black")
+        sp.begin_fill()
+        sp.penup()
+        sp.goto(30,60)
+        sp.pendown()
 
 
-                        sp.left(76)
-                        sp.forward(20)
-                        sp.circle(-280,45)
+        sp.left(76)
+        sp.forward(20)
+        sp.circle(-280,45)
 
 
-                        sp.left(140)
-                        sp.forward(20)
-                        sp.circle(220,40)
-                        sp.circle(80,70)
+        sp.left(140)
+        sp.forward(20)
+        sp.circle(220,40)
+        sp.circle(80,70)
 
 
-                        sp.circle(107,60)
-                        sp.end_fill()
+        sp.circle(107,60)
+        sp.end_fill()
 
 
-                        #white left eye
-                        sp.penup()
-                        sp.goto(5,55)
-                        sp.pendown()
+        #white left eye
+        sp.penup()
+        sp.goto(5,55)
+        sp.pendown()
 
 
-                        sp.color("White")
-                        sp.fillcolor("white")
-                        sp.begin_fill()
-                        sp.right(200)
-                        sp.forward(20)
-                        sp.circle(-70,90)
-                        sp.forward(10)
-                        sp.circle(-100,50)
-                        sp.forward(35)
+        sp.color("White")
+        sp.fillcolor("white")
+        sp.begin_fill()
+        sp.right(200)
+        sp.forward(20)
+        sp.circle(-70,90)
+        sp.forward(10)
+        sp.circle(-100,50)
+        sp.forward(35)
 
 
-                        sp.right(140)
-                        sp.forward(20)
-                        sp.circle(225,42)
-                        sp.end_fill()
+        sp.right(140)
+        sp.forward(20)
+        sp.circle(225,42)
+        sp.end_fill()
 
 
-                        #right eye
-                        sp.penup()
-                        sp.goto(90,60)
-                        sp.pendown()
+        #right eye
+        sp.penup()
+        sp.goto(90,60)
+        sp.pendown()
 
 
-                        sp.color("Black")
-                        sp.fillcolor("Black")
-                        sp.begin_fill()
-                        sp.left(45)
-                        sp.forward(20)
-                        sp.circle(280,45)
+        sp.color("Black")
+        sp.fillcolor("Black")
+        sp.begin_fill()
+        sp.left(45)
+        sp.forward(20)
+        sp.circle(280,45)
 
 
-                        sp.right(140)
-                        sp.forward(20)
-                        sp.circle(-220,40)
-                        sp.circle(-80,70)
+        sp.right(140)
+        sp.forward(20)
+        sp.circle(-220,40)
+        sp.circle(-80,70)
 
 
-                        sp.circle(-107,60)
-                        sp.end_fill()
+        sp.circle(-107,60)
+        sp.end_fill()
 
 
-                        #white right eye
-                        sp.pen()
-                        sp.goto(125,55)
-                        sp.pendown()
+        #white right eye
+        sp.pen()
+        sp.goto(125,55)
+        sp.pendown()
 
 
-                        sp.color("White")
-                        sp.fillcolor("White")
-                        sp.begin_fill()
-                        sp.right(160)
-                        sp.forward(20)
+        sp.color("White")
+        sp.fillcolor("White")
+        sp.begin_fill()
+        sp.right(160)
+        sp.forward(20)
 
 
-                        sp.circle(60,80)
-                        sp.forward(10)
-                        sp.circle(90,55)
-                        sp.forward(40)
+        sp.circle(60,80)
+        sp.forward(10)
+        sp.circle(90,55)
+        sp.forward(40)
 
 
-                        sp.right(215)
-                        sp.circle(-250,39.5)
-                        sp.end_fill()
+        sp.right(215)
+        sp.circle(-250,39.5)
+        sp.end_fill()
 
 
-                        #web lines
-                        sp.penup()
-                        sp.goto(30,60)
-                        sp.pendown()
+        #web lines
+        sp.penup()
+        sp.goto(30,60)
+        sp.pendown()
 
 
-                        sp.color("Black")
-                        sp.right(203)
-                        sp.forward(60)
-                        sp.left(120)
-                        sp.forward(30)
-                        sp.left(60)
-                        sp.left(2)
-                        sp.forward(35)
-                        sp.left(65)
-                        sp.forward(25)
+        sp.color("Black")
+        sp.right(203)
+        sp.forward(60)
+        sp.left(120)
+        sp.forward(30)
+        sp.left(60)
+        sp.left(2)
+        sp.forward(35)
+        sp.left(65)
+        sp.forward(25)
 
 
-                        sp.forward(350)
+        sp.forward(350)
 
 
-                        sp.penup()
-                        sp.goto(90,60)
-                        sp.pendown()
-                        sp.left(42)
-                        sp.forward(338)
+        sp.penup()
+        sp.goto(90,60)
+        sp.pendown()
+        sp.left(42)
+        sp.forward(338)
 
 
-                        sp.penup()
-                        sp.goto(-40,8)
-                        sp.pendown()
-                        sp.right(65)
-                        sp.forward(185)
+        sp.penup()
+        sp.goto(-40,8)
+        sp.pendown()
+        sp.right(65)
+        sp.forward(185)
 
 
-                        sp.penup()
-                        sp.goto(145,18)
-                        sp.pendown()
-                        sp.left(90)
-                        sp.forward(190)
+        sp.penup()
+        sp.goto(145,18)
+        sp.pendown()
+        sp.left(90)
+        sp.forward(190)
 
 
-                        sp.penup()
-                        sp.goto(40,85)
-                        sp.pendown()
-                        sp.left(150)
-                        sp.forward(280)
+        sp.penup()
+        sp.goto(40,85)
+        sp.pendown()
+        sp.left(150)
+        sp.forward(280)
 
 
-                        sp.penup()
-                        sp.goto(75,88)
-                        sp.pendown()
-                        sp.right(25)
-                        sp.forward(280)
+        sp.penup()
+        sp.goto(75,88)
+        sp.pendown()
+        sp.right(25)
+        sp.forward(280)
 
 
-                        sp.penup()
-                        sp.goto(26,65)
-                        sp.pendown()
-                        sp.left(45)
-                        sp.forward(280)
+        sp.penup()
+        sp.goto(26,65)
+        sp.pendown()
+        sp.left(45)
+        sp.forward(280)
 
 
-                        sp.penup()
-                        sp.goto(90,65)
-                        sp.pendown()
-                        sp.right(65)
-                        sp.forward(270)
+        sp.penup()
+        sp.goto(90,65)
+        sp.pendown()
+        sp.right(65)
+        sp.forward(270)
 
 
-                        #web circle
-                        sp.penup()
-                        sp.goto(-5,20)
-                        sp.pendown()
-                        sp.right(70)
-                        sp.circle(-20,45)
+        #web circle
+        sp.penup()
+        sp.goto(-5,20)
+        sp.pendown()
+        sp.right(70)
+        sp.circle(-20,45)
 
 
-                        sp.left(90)
-                        sp.circle(-90,65)
+        sp.left(90)
+        sp.circle(-90,65)
 
 
-                        sp.left(90)
-                        sp.circle(-40,30)
+        sp.left(90)
+        sp.circle(-40,30)
 
 
-                        #webline2
-                        sp.penup()
-                        sp.goto(-140,60)
-                        sp.pendown()
+        #webline2
+        sp.penup()
+        sp.goto(-140,60)
+        sp.pendown()
 
 
-                        sp.right(90)
-                        sp.circle(-205,35)
+        sp.right(90)
+        sp.circle(-205,35)
 
 
-                        sp.left(60)
-                        sp.circle(-150,40)
+        sp.left(60)
+        sp.circle(-150,40)
 
 
-                        sp.left(100)
-                        sp.circle(-280,45)
+        sp.left(100)
+        sp.circle(-280,45)
 
 
-                        sp.left(100)
-                        sp.circle(-130,45)
+        sp.left(100)
+        sp.circle(-130,45)
 
 
-                        sp.left(60)
-                        sp.circle(-135,45)
+        sp.left(60)
+        sp.circle(-135,45)
 
 
-                        #webline 3
-                        sp.penup()
-                        sp.goto(0,75)
-                        sp.pendown()
-                        sp.circle(25,45)
+        #webline 3
+        sp.penup()
+        sp.goto(0,75)
+        sp.pendown()
+        sp.circle(25,45)
 
 
-                        sp.right(90)
-                        sp.circle(40,45)
+        sp.right(90)
+        sp.circle(40,45)
 
 
-                        sp.right(70)
-                        sp.circle(60,45)
+        sp.right(70)
+        sp.circle(60,45)
 
 
-                        sp.right(70)
-                        sp.circle(35,45)
+        sp.right(70)
+        sp.circle(35,45)
 
 
-                        sp.right(65)
-                        sp.circle(30,45)
+        sp.right(65)
+        sp.circle(30,45)
 
 
-                        #web line 4
-                        sp.penup()
-                        sp.goto(-45,105)
-                        sp.pendown()
+        #web line 4
+        sp.penup()
+        sp.goto(-45,105)
+        sp.pendown()
 
 
-                        sp.left(80)
-                        sp.circle(65,50)
+        sp.left(80)
+        sp.circle(65,50)
 
 
-                        sp.right(100)
-                        sp.circle(60,65)
+        sp.right(100)
+        sp.circle(60,65)
 
 
-                        sp.right(100)
-                        sp.circle(110,45)
+        sp.right(100)
+        sp.circle(110,45)
 
 
-                        sp.right(80)
-                        sp.circle(60,65)
+        sp.right(80)
+        sp.circle(60,65)
 
 
-                        sp.right(90)
-                        sp.circle(65,45)
+        sp.right(90)
+        sp.circle(65,45)
 
 
-                        #webline 5
-                        sp.penup()
-                        sp.goto(-96,157)
-                        sp.pendown()
+        #webline 5
+        sp.penup()
+        sp.goto(-96,157)
+        sp.pendown()
 
 
-                        sp.left(110)
-                        sp.circle(110,45)
+        sp.left(110)
+        sp.circle(110,45)
 
 
-                        sp.right(110)
-                        sp.circle(90,70)
+        sp.right(110)
+        sp.circle(90,70)
 
 
-                        sp.right(105)
-                        sp.circle(125,65)
+        sp.right(105)
+        sp.circle(125,65)
 
 
-                        sp.right(110)
-                        sp.circle(90,70)
+        sp.right(110)
+        sp.circle(90,70)
 
 
-                        sp.right(90)
-                        sp.circle(100,40)
+        sp.right(90)
+        sp.circle(100,40)
 
 
-                        sp.penup()
-                        sp.goto(-130,296)
-                        sp.pendown()
+        sp.penup()
+        sp.goto(-130,296)
+        sp.pendown()
 
 
-                        #web line 6
-                        sp.left(55)
-                        sp.circle(105,65)
+        #web line 6
+        sp.left(55)
+        sp.circle(105,65)
 
 
-                        sp.right(90)
-                        sp.circle(175,53)
+        sp.right(90)
+        sp.circle(175,53)
 
 
-                        sp.right(90)
-                        sp.circle(120,60)
+        sp.right(90)
+        sp.circle(120,60)
 
 
-                        sp.right(75)
-                        sp.circle(280,30)
+        sp.right(75)
+        sp.circle(280,30)
 
 
-                        sp.right(65)
-                        sp.circle(440,38)
+        sp.right(65)
+        sp.circle(440,38)
 
 
-                        sp.right(65)
-                        sp.circle(220,42.5)
+        sp.right(65)
+        sp.circle(220,42.5)
 
 
-                        sp.right(120)
-                        sp.circle(250,75)
+        sp.right(120)
+        sp.circle(250,75)
 
 
-                        sp.right(120)
-                        sp.circle(232,40)
+        sp.right(120)
+        sp.circle(232,40)
 
 
-                        sp.right(75)
-                        sp.circle(280,60)
+        sp.right(75)
+        sp.circle(280,60)
 
 
-                        sp.right(75)
-                        sp.circle(260,35)
+        sp.right(75)
+        sp.circle(260,35)
 
 
-                        turtle.done()
-                    </code>
-                </pre>
+        turtle.done()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Vlad</summary>
                 <img src="vlad-9a/Screenshot_20241030_124515.png">
-                <pre>
-                    <code>
-                        import turtle
-    
-    
-                        screen = turtle.Screen()
-                        screen.bgcolor("black")
-    
-                        bob = turtle.Turtle()
-                        bob.color ("black")
-                        bob.goto(-200, 50)
-                        bob.color("orange")
-                        for _ in range (180):
-                        bob.forward(2)
-                        bob.left(2)
-    
-                        bob.color ("black")
-                        bob.goto( 200, 50)
-                        bob.color("orange")
-                        for _ in range (180):
-                        bob.forward(2)
-                        bob.left(2)
-    
-    
-    
-                        turtle.done()
-                    </code>
-                </pre>
+<pre>
+    <code>
+        import turtle
+
+
+        screen = turtle.Screen()
+        screen.bgcolor("black")
+
+        bob = turtle.Turtle()
+        bob.color ("black")
+        bob.goto(-200, 50)
+        bob.color("orange")
+        for _ in range (180):
+        bob.forward(2)
+        bob.left(2)
+
+        bob.color ("black")
+        bob.goto( 200, 50)
+        bob.color("orange")
+        for _ in range (180):
+        bob.forward(2)
+        bob.left(2)
+
+
+
+        turtle.done()
+    </code>
+</pre>
             </details>
             <details>
                 <summary>Borislav</summary>
-                <pre>
-                    <code>
-                        import turtle
+<pre>
+    <code>
+        import turtle
 
-                        # Function to draw the skull with features
-                        def draw_skull():
-                            turtle.penup()
-                            turtle.goto(0, 100)
-                            turtle.pendown()
-                            turtle.circle(50)  # Skull
-                            
-                            # Eyes
-                            turtle.penup()
-                            turtle.goto(-20, 120)
-                            turtle.pendown()
-                            turtle.dot(10)  # Left eye
-                            turtle.penup()
-                            turtle.goto(20, 120)
-                            turtle.pendown()
-                            turtle.dot(10)  # Right eye
-                            
-                            # Nose
-                            turtle.penup()
-                            turtle.goto(0, 100)
-                            turtle.pendown()
-                            turtle.goto(0, 90)
-                            
-                            # Mouth
-                            turtle.penup()
-                            turtle.goto(-20, 80)
-                            turtle.pendown()
-                            turtle.goto(20, 80)
-                        
-                        # Function to draw ribs
-                        def draw_ribs():
-                            turtle.circle(70, 15)
-                            turtle.penup()
-                            turtle.goto(35, 80)
-                            turtle.pendown()
-                            turtle.circle(70, 25)
-                            
-                        
-                        
-                        
-                        # Function to draw arms
-                        def draw_arms():
-                            # Left arm
-                            turtle.penup()
-                            turtle.goto(-50, 30)
-                            turtle.pendown()
-                            turtle.goto(-80, 10)  # Upper arm
-                            turtle.goto(-100, 0)  # Forearm
-                            draw_hand(-100, 0, "left")
-                        
-                            # Right arm
-                            turtle.penup()
-                            turtle.goto(50, 30)
-                            turtle.pendown()
-                            turtle.goto(80, 10)  # Upper arm
-                            turtle.goto(100, 0)  # Forearm
-                            draw_hand(100, 0, "right")
-                        
-                        # Function to draw hands
-                        def draw_hand(x, y, side):
-                            turtle.penup()
-                            turtle.goto(x, y)
-                            turtle.pendown()
-                            if side == "left":
-                                fingers = [(-10, -10), (-10, -20), (-10, -30), (-10, -40)]
-                            else:
-                                fingers = [(10, -10), (10, -20), (10, -30), (10, -40)]
-                                
-                            for fx, fy in fingers:
-                                turtle.goto(x + fx, y + fy)
-                        
-                        # Function to draw the body
-                        def draw_body():
-                            turtle.penup()
-                            turtle.goto(0, 50)
-                            turtle.pendown()
-                            turtle.goto(0, -50)  # Spine
-                        
-                        # Function to draw the legs
-                        def draw_legs():
-                            # Left leg
-                            turtle.penup()
-                            turtle.goto(0, -50)
-                            turtle.pendown()
-                            turtle.goto(-30, -100)  # Thigh
-                            turtle.goto(-30, -130)  # Knee
-                            turtle.goto(-10, -130)  # Calf
-                            turtle.goto(-10, -100)  # Ankle
-                            draw_foot(-10, -100, "left")
-                        
-                            # Right leg
-                            turtle.penup()
-                            turtle.goto(0, -50)
-                            turtle.pendown()
-                            turtle.goto(30, -100)  # Thigh
-                            turtle.goto(30, -130)  # Knee
-                            turtle.goto(10, -130)  # Calf
-                            turtle.goto(10, -100)  # Ankle
-                            draw_foot(10, -100, "right")
-                        
-                        # Function to draw feet
-                        def draw_foot(x, y, side):
-                            turtle.penup()
-                            turtle.goto(x, y)
-                            turtle.pendown()
-                            if side == "left":
-                                toes = [(-20, -10), (-10, -10), (0, -10)]
-                            else:
-                                toes = [(20, -10), (10, -10), (0, -10)]
-                            
-                            for tx, ty in toes:
-                                turtle.goto(x + tx, y + ty)
-                        
-                        # Main drawing function
-                        def draw_skeleton():
-                            turtle.speed(2)
-                            draw_skull()
-                            draw_ribs()
-                            draw_arms()
-                            draw_body()
-                            draw_legs()
-                            
-                            turtle.hideturtle()
-                            turtle.done()
-                        
-                        # Run the drawing function
-                        draw_skeleton()
-                        
-                    </code>
-                </pre>
+        # Function to draw the skull with features
+        def draw_skull():
+            turtle.penup()
+            turtle.goto(0, 100)
+            turtle.pendown()
+            turtle.circle(50)  # Skull
+            
+            # Eyes
+            turtle.penup()
+            turtle.goto(-20, 120)
+            turtle.pendown()
+            turtle.dot(10)  # Left eye
+            turtle.penup()
+            turtle.goto(20, 120)
+            turtle.pendown()
+            turtle.dot(10)  # Right eye
+            
+            # Nose
+            turtle.penup()
+            turtle.goto(0, 100)
+            turtle.pendown()
+            turtle.goto(0, 90)
+            
+            # Mouth
+            turtle.penup()
+            turtle.goto(-20, 80)
+            turtle.pendown()
+            turtle.goto(20, 80)
+        
+        # Function to draw ribs
+        def draw_ribs():
+            turtle.circle(70, 15)
+            turtle.penup()
+            turtle.goto(35, 80)
+            turtle.pendown()
+            turtle.circle(70, 25)
+            
+        
+        
+        
+        # Function to draw arms
+        def draw_arms():
+            # Left arm
+            turtle.penup()
+            turtle.goto(-50, 30)
+            turtle.pendown()
+            turtle.goto(-80, 10)  # Upper arm
+            turtle.goto(-100, 0)  # Forearm
+            draw_hand(-100, 0, "left")
+        
+            # Right arm
+            turtle.penup()
+            turtle.goto(50, 30)
+            turtle.pendown()
+            turtle.goto(80, 10)  # Upper arm
+            turtle.goto(100, 0)  # Forearm
+            draw_hand(100, 0, "right")
+        
+        # Function to draw hands
+        def draw_hand(x, y, side):
+            turtle.penup()
+            turtle.goto(x, y)
+            turtle.pendown()
+            if side == "left":
+                fingers = [(-10, -10), (-10, -20), (-10, -30), (-10, -40)]
+            else:
+                fingers = [(10, -10), (10, -20), (10, -30), (10, -40)]
+                
+            for fx, fy in fingers:
+                turtle.goto(x + fx, y + fy)
+        
+        # Function to draw the body
+        def draw_body():
+            turtle.penup()
+            turtle.goto(0, 50)
+            turtle.pendown()
+            turtle.goto(0, -50)  # Spine
+        
+        # Function to draw the legs
+        def draw_legs():
+            # Left leg
+            turtle.penup()
+            turtle.goto(0, -50)
+            turtle.pendown()
+            turtle.goto(-30, -100)  # Thigh
+            turtle.goto(-30, -130)  # Knee
+            turtle.goto(-10, -130)  # Calf
+            turtle.goto(-10, -100)  # Ankle
+            draw_foot(-10, -100, "left")
+        
+            # Right leg
+            turtle.penup()
+            turtle.goto(0, -50)
+            turtle.pendown()
+            turtle.goto(30, -100)  # Thigh
+            turtle.goto(30, -130)  # Knee
+            turtle.goto(10, -130)  # Calf
+            turtle.goto(10, -100)  # Ankle
+            draw_foot(10, -100, "right")
+        
+        # Function to draw feet
+        def draw_foot(x, y, side):
+            turtle.penup()
+            turtle.goto(x, y)
+            turtle.pendown()
+            if side == "left":
+                toes = [(-20, -10), (-10, -10), (0, -10)]
+            else:
+                toes = [(20, -10), (10, -10), (0, -10)]
+            
+            for tx, ty in toes:
+                turtle.goto(x + tx, y + ty)
+        
+        # Main drawing function
+        def draw_skeleton():
+            turtle.speed(2)
+            draw_skull()
+            draw_ribs()
+            draw_arms()
+            draw_body()
+            draw_legs()
+            
+            turtle.hideturtle()
+            turtle.done()
+        
+        # Run the drawing function
+        draw_skeleton()
+        
+    </code>
+</pre>
             </details>
         </section>
     </main>
