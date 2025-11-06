@@ -24,6 +24,11 @@ body{
             margin: 1rem;
             details{
                 margin: 1rem 0;
+                &.year{
+                  summary{
+                    font-size: 2rem;
+                  }
+                }
                 img{
                   max-width: 100%;
                 }
