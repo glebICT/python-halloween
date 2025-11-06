@@ -2658,6 +2658,155 @@ window.exitonclick()
                     </code>
                 </pre>
             </details>
+<details>
+                <summary>Vasily</summary>
+                 <img src="vasily/Capture.PNG">
+                <pre>
+                    <code>
+import turtle
+
+h = turtle.Turtle()
+h.fillcolor("gray")
+h.begin_fill()
+h.left(90)
+h.speed(0)
+h.forward(150)
+h.circle(100,180)
+h.forward(150)
+h.left(90)
+h.forward(200)
+h.left(90)
+h.end_fill()
+h.forward(150)
+h.penup()
+h.left(90)
+h.forward(75)
+h.fillcolor("light gray")
+h.begin_fill()
+h.pendown()
+h.right(90)
+h.forward(15)
+h.left(90)
+h.forward(15)
+h.right(90)
+h.forward(15)
+h.left(90)
+h.forward(15)
+h.left(90)
+h.forward(15)
+h.right(90)
+h.forward(15)
+h.left(90)
+h.forward(15)
+h.left(90)
+h.forward(15)
+h.right(90)
+h.forward(30)
+h.left(90)
+h.forward(15)
+h.left(90)
+h.forward(30)
+h.right(90)
+h.forward(15)
+h.end_fill()
+
+turtle.done()
+                    </code>
+                </pre>
+            </details>
+<details>
+                <summary>Sophia B</summary>
+                 <img src="sophiab/Capture.PNG">
+                <pre>
+                    <code>
+from turtle import *
+
+screen = Screen()
+screen.setup(900, 650)
+screen.bgcolor('black')
+
+def stem():
+    penup()
+    goto(-20, 175)
+    color("#424D06")
+    begin_fill()
+    forward(40)
+    right(90)
+    forward(60)
+    right(90)
+    forward(40)
+    right(90)
+    forward(60)
+    end_fill()
+
+
+speed(50)
+hideturtle()
+
+fillcolor("#C25B0C")
+
+begin_fill()
+up()
+
+r = 180
+goto(0, -240)
+circle(r)
+
+end_fill()
+
+def eye(x,y):
+    up()
+    setpos(x,y)
+    fillcolor("#FCAE08")
+    begin_fill()
+    forward(100) 
+    left(120)
+    forward(100) 
+    left(120)
+    forward(100) 
+    end_fill()
+
+eye(-140, -45)
+eye(90, 40)
+
+
+up()
+setpos(0, -110)
+fillcolor("#FCAE08")
+begin_fill()
+forward(40)
+right(120)
+forward(40)
+right(120)
+forward(40)
+end_fill()
+
+def teeth(x,y):
+    up()
+    setpos(x,y)
+    fillcolor("#FCAE08")
+    begin_fill()
+    forward(50)
+    right(120)
+    forward(50)
+    right(120)
+    forward(50)
+    end_fill()
+
+teeth(-50, -120)
+teeth(-50, -120)
+teeth(24, -163)
+teeth(100, -120)
+
+stem()
+
+goto(-200, -290)
+pencolor("#921E1E")
+write('Happy Halloween', font=("italic", 35, "bold"))
+screen.mainloop()
+                    </code>
+                </pre>
+            </details>
         </details>
     </section>
     </main>
