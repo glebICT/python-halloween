@@ -2082,6 +2082,99 @@ screen.mainloop()
                     </code>
                 </pre>
             </details>
+<details>
+                <summary>Ruzbeh</summary>
+                 <img src="ruzbeh/Capture.PNG">
+                <pre>
+                    <code>
+
+import turtle
+t = turtle.Turtle() 
+t.shape('turtle')
+
+def make_triangle(x,y,color, size = 100):
+    t.penup() 
+    t.goto(x,y) 
+    t.begin_fill() 
+    t.color(color) 
+    t.pendown()
+    for count in range(3):
+        t.forward(size)
+        t.left(120)
+    t.end_fill()
+    
+t.penup() 
+t.goto(-50,-150)
+t.color('orangered')
+t.begin_fill()
+t.circle(150)
+t.end_fill()
+
+t.goto(50,-150)
+t.color('orangered')
+t.begin_fill()
+t.circle(150)
+t.end_fill()
+
+#the teeth
+make_triangle(-35,-90,'black',size=60)
+make_triangle(35,-90,'black',size=60)
+make_triangle(-70,-90,'black',size=60)
+make_triangle(70,-90,'black',size=60)
+make_triangle(0,-90,'black',size=60)
+make_triangle(-100,-90,'black',size=60)
+
+#the nose 
+make_triangle(-20,7.5,'black',size=50)
+
+
+#draw the eyes 
+make_triangle(-90,60,'black',size=60)
+make_triangle(50,60,'black',size=60)
+
+#screen
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+
+#teeth yellow 
+make_triangle(-35,-90,'yellow',size=60)
+make_triangle(35,-90,'yellow',size=60)
+make_triangle(-70,-90,'yellow',size=60)
+make_triangle(70,-90,'yellow',size=60)
+make_triangle(0,-90,'yellow',size=60)
+make_triangle(-100,-90,'yellow',size=60)
+
+#yellow nose
+make_triangle(-20,7.5,'yellow',size=50)
+
+#yellow eyes
+make_triangle(-90,60,'yellow',size=60)
+make_triangle(50,60,'yellow',size=60)
+
+#the stem
+t.penup()
+t.goto(-10,140)
+t.begin_fill()
+t.color('green')
+t.forward(20)
+t.left(90)
+t.forward(80)
+t.left(90)
+t.forward(20)
+t.left(90)
+t.forward(80)
+t.left(90)
+t.end_fill()
+
+t.penup()
+t.goto(0,-200)
+
+#close the drawing window
+turtle.exitonclick()
+                    </code>
+                </pre>
+            </details>
         </details>
 
     </main>
