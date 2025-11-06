@@ -2946,7 +2946,74 @@ screen.mainloop()
             </code>
                 </pre>
             </details>
-            
+<details>
+                <summary>Platon</summary>
+                 <img src="platon/Capture.PNG">
+                <pre>
+                    <code>
+#import turtle library
+import turtle
+
+pen = turtle.Turtle()
+pen.shape("turtle")
+
+def make_triangle(x, y, size, color):
+  pen.penup()
+  pen.goto(x,y)
+  pen.begin_fill()
+  pen.color(color)
+  pen.pendown()
+  for lines in range(3):
+
+    pen.forward(size)
+    #120 is the angle to move for a triangle
+    #DO NOT change
+    pen.left(120)
+  pen.end_fill()
+  
+# This is a function to make circles of a color and size
+# x,y is the position we choose
+def make_circle(x, y, size, color):
+  pen.penup()
+  pen.goto(x,y)
+  pen.color(color)
+  pen.begin_fill()
+  pen.circle(size)
+  pen.pendown()
+  pen.end_fill()
+
+# The Bat Body:
+make_circle(0,-150, 60, 'black')
+pen.left(180)   
+
+# The Wings:
+make_triangle(-50, -80, 80, 'black')
+make_triangle(130, -80, 80, 'black')
+
+# The Teeth:
+make_triangle(-5, -120, 15, 'white')
+make_triangle(20, -120, 15, 'white')
+
+# The Eyes:
+make_circle(-20,-55, 15, 'white')
+make_circle(20,-55, 15, 'white')
+pen.left(180)
+
+# The Pupils:
+make_circle(-20,-85, 5, 'black')
+make_circle(20,-85, 5, 'black')
+
+# The Ears:
+make_triangle(-40, -45, 30, 'black')
+make_triangle(10, -45, 30, 'black')
+
+
+
+turtle.done()
+
+            </code>
+                </pre>
+            </details>
         </details>
     </section>
     </main>
