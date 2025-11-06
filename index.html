@@ -2456,7 +2456,7 @@ turtle.done()
             </details>
 <details>
                 <summary>Vasily</summary>
-                 <img src="vasily/">
+                 <img src="vasily/Capture.PNG">
                 <pre>
                     <code>
 import turtle
@@ -2507,6 +2507,154 @@ h.forward(15)
 h.end_fill()
 
 turtle.done()
+                    </code>
+                </pre>
+            </details>
+<details>
+                <summary>Sophia K</summary>
+                 <img src="sophiak/Capture.PNG">
+                <pre>
+                    <code>
+import turtle
+import math
+
+window = turtle.Screen()
+window.bgcolor("black")
+
+cursor = turtle.Turtle() 
+cursor.shape("turtle")
+cursor.color("orange")
+cursor.speed(8)
+cursor.pensize(5)
+
+def movePen(cursor, x, y):
+  cursor.penup()
+  cursor.setposition(x, y)
+  cursor.pendown()
+
+def movePenX(cursor, x):
+  cursor.penup()
+  cursor.setx(x)
+  cursor.pendown()
+
+def movePenY(cursor, y):
+  cursor.penup()
+  cursor.sety(y)
+  cursor.pendown()
+
+def positionAlongCircle(x, y, radius, angle):
+  radians = math.radians(angle)
+  return [x + (radius*math.sin(radians)),
+            y + (radius*math.cos(radians))]
+
+
+movePenY(cursor, -150)
+cursor.fillcolor("yellow")
+cursor.begin_fill()
+cursor.circle(150)
+cursor.end_fill()
+
+
+noseMouthOffset = -15
+movePenY(cursor, -20 + noseMouthOffset)
+cursor.fillcolor("yellow")
+cursor.begin_fill()
+cursor.circle(20)
+cursor.end_fill()
+
+
+movePen(cursor, -100, -20 + noseMouthOffset)
+cursor.right(90)
+cursor.circle(50,180)
+cursor.left(180)
+cursor.circle(50,180)
+
+
+eyeSpacingX = 60
+eyePosY = 40
+eyeRadius = 30
+
+
+movePen(cursor, eyeSpacingX, eyePosY)
+cursor.right(180)
+cursor.circle(eyeRadius, -180)
+cursor.end_fill()
+
+
+movePen(cursor, -eyeSpacingX, eyePosY)
+cursor.fillcolor("white")
+cursor.begin_fill()
+cursor.circle(eyeRadius, 360)
+cursor.end_fill()
+
+movePen(cursor, 25, -60 + noseMouthOffset)
+cursor.setheading(-80)
+cursor.fillcolor("white")
+cursor.begin_fill()
+cursor.forward(25)        
+cursor.left(120)
+cursor.forward(20)
+cursor.left(120)
+cursor.forward(20)
+cursor.end_fill()
+cursor.setheading(0)
+
+
+
+
+
+earBeginAngle = 25
+earSize = 85
+earWidth = 22
+positionA = positionAlongCircle(0, 0, 150, earBeginAngle)
+movePen(cursor, positionA[0], positionA[1])
+cursor.fillcolor("yellow")
+cursor.begin_fill()
+
+positionB = positionAlongCircle(0, 0, 150 + earSize, earBeginAngle + earWidth)
+cursor.setposition(positionB[0], positionB[1])
+
+positionC = positionAlongCircle(0, 0, 150, earBeginAngle + earWidth * 2)
+cursor.setposition(positionC[0], positionC[1])
+
+
+positionA = positionAlongCircle(0, 0, 150, -earBeginAngle)
+movePen(cursor, positionA[0], positionA[1])
+
+positionB = positionAlongCircle(0, 0, 150 + earSize, -earBeginAngle + -earWidth)
+cursor.setposition(positionB[0], positionB[1])
+
+positionC = positionAlongCircle(0, 0, 150, -earBeginAngle + -earWidth * 2)
+cursor.setposition(positionC[0], positionC[1])
+cursor.end_fill()
+
+
+whiskerLength = 180
+
+
+movePen(cursor, 50, -15)
+cursor.setheading(0)
+cursor.forward(whiskerLength)
+
+movePen(cursor, 50, 0)
+cursor.left(5)
+cursor.forward(whiskerLength)
+
+
+movePen(cursor, -50, -15)
+cursor.setheading(180)
+cursor.forward(whiskerLength)
+
+movePen(cursor, -50, 0)
+cursor.left(-5)
+cursor.forward(whiskerLength)
+
+movePen(cursor,-300,-260)
+cursor.write('happy halloween',font=("italic",60,"bold"))
+
+window.exitonclick()
+
+
                     </code>
                 </pre>
             </details>
