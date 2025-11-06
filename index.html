@@ -2327,6 +2327,134 @@ turtle.done()
                     </code>
                 </pre>
             </details>
+<details>
+                <summary>Tatyana</summary>
+                 <img src="tanya/Capture.PNG">
+                <pre>
+                    <code>
+import turtle
+
+
+screen = turtle.Screen()
+screen.bgcolor("orange")
+screen.title("scary ghost")
+
+ghost = turtle.Turtle()
+ghost.speed(3)
+ghost.pensize(5)
+
+def draw_ghost_head():
+    ghost.penup()
+    ghost.goto(0, 100)
+    ghost.color("black")
+    ghost.begin_fill()
+    ghost.circle(80)
+    ghost.end_fill()
+
+def draw_scary_ear():
+    ghost.penup()
+    ghost.goto(-30, 250)
+    ghost.setheading(80)
+    ghost.pendown()
+    ghost.color("red")
+    ghost.begin_fill()
+    ghost.begin_fill()
+    ghost.forward(20)
+    ghost.right(120)
+    ghost.forward(20)
+
+def draw_scary_earz():
+    ghost.penup()
+    ghost.goto(30, 250)
+    ghost.setheading(20)
+    ghost.pendown()
+    ghost.color("red")
+    ghost.begin_fill()
+    ghost.begin_fill()
+    ghost.forward(20)
+    ghost.right(120)
+    ghost.forward(20)
+
+def draw_scary_eyes():
+    ghost.color("dark red")
+
+
+    ghost.penup()
+    ghost.goto(-35, 170)
+    ghost.setheading(-20)
+    ghost.pendown()
+    ghost.begin_fill()
+    for _ in range(2):
+        ghost.circle(20, 90)
+        ghost.circle(10, 90)
+    ghost.end_fill()
+
+
+    ghost.penup()
+    ghost.goto(20, 170)
+    ghost.setheading(-160)
+    ghost.pendown()
+    ghost.begin_fill()
+    for _ in range(2):
+        ghost.circle(20, 90)
+        ghost.circle(10, 90)
+    ghost.end_fill()
+
+
+def draw_scary_mouth():
+    ghost.penup()
+    ghost.goto(-30, 130)
+    ghost.setheading(-180)
+    ghost.pendown()
+    ghost.color("red")
+    ghost.begin_fill()
+    ghost.forward(20)
+    ghost.right(120)
+    ghost.forward(20)
+    ghost.left(60)
+    ghost.end_fill()
+
+
+def draw_red_legs():
+    ghost.color("red")
+    ghost.pensize(8)
+
+
+    ghost.penup()
+    ghost.goto(-30, 100)
+    ghost.setheading(-90)
+    ghost.pendown()
+    ghost.forward(60)
+
+    ghost.penup()
+    ghost.goto(30, 100)
+    ghost.setheading(-90)
+    ghost.pendown()
+    ghost.forward(60)
+
+    ghost.pensize(4)
+    ghost.color("dark red")
+    for x in [-30, 30]:
+        ghost.penup()
+        ghost.goto(x, 40)
+        ghost.setheading(0)
+        ghost.pendown()
+        ghost.forward(20)
+
+
+draw_ghost_head()
+draw_scary_ear()
+draw_scary_earz()
+draw_scary_eyes()
+draw_scary_mouth()
+draw_red_legs()
+
+ghost.hideturtle()
+turtle.done()
+                    </code>
+                </pre>
+            </details>
+
         </details>
     </section>
     </main>
