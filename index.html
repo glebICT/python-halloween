@@ -3175,6 +3175,58 @@ turtle.done()
             </code>
                 </pre>
         </details>
+        <details>
+                <summary>Milana</summary>
+                 <img src="milana/Capture.PNG">
+                <pre>
+            <code>
+import turtle
+tina = turtle.Turtle()
+tina.shape("turtle")
+def make_triangle(x, y, color):
+    tina.penup()
+    tina.goto(x, y)
+    tina.begin_fill()
+    tina.color(color)
+    tina.pendown()
+    for count in range(3):
+        tina.forward(50)
+        tina.left(120)
+    tina.end_fill()
+def make_square(x, y, color):
+    tina.penup()
+    tina.goto(x, y)
+    tina.begin_fill()
+    tina.color(color)
+    tina.pendown()
+    for count2 in range(3):
+            tina.forward(50)
+            tina.left(90)
+    tina.end_fill()
+tina.penup()
+tina.goto(0, -150)
+tina.color('#ff6600')
+tina.begin_fill()
+tina.circle(150)
+tina.end_fill()
+tina.left(180)
+make_triangle(-35, -20, '#ffffff')
+make_triangle(0, -20, '#ffffff')
+make_triangle(35, -20, '#ffffff')
+tina.left(180)
+make_triangle(-70, 50, '#ffffff')
+make_triangle(0, 50, '#ffffff')
+make_square(-20, 125, '#663300')
+tina.penup()
+tina.goto(-100, -185)
+tina.goto(-120, -185)
+tina.left(180)
+
+turtle.done()
+
+            </code>
+                </pre>
+        </details>
         </details>
     </section>
     </main>
